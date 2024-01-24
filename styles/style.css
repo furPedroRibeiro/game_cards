@@ -5,14 +5,16 @@
 }
 :root {
     --swiper-theme-color: #000;
-    --primary: #ffffff;
-    --secondary: #112833;
+    --primary: #e00a0a;
+    --secondary: #000;
+    --white: #FFF;
 }
 body{
     background-color: var(--primary);
     font-family: 'Montserrat', sans-serif;
 }
 header{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,15 +22,16 @@ header{
     flex-wrap: wrap;
 
     padding-block: 2rem;
-    background-color: var(--secondary);
+    background-color: var(--white);
 }
 .item-header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--primary);
+    color: var(--black);
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.2rem;
 
     gap: 5px;
 }
@@ -39,66 +42,45 @@ header{
     content: '';
     width: 0;
     height: 2px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
 
     transition: 0.7s all;
 }
 section.slider{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    margin-block: 3rem;
     width: 100%;
 }
 swiper-container {
-    width: 700px;
-    height: 500px;
-}
-@media (max-width: 700px){
-    swiper-container {
-        width: 100%;
-        height: 400px;
-    }
-}
-@media (max-width: 400px){
-    swiper-container {
-        width: 100%;
-        height: 230px;
-    }
-}
-@media (max-width: 300px){
-    swiper-container {
-        width: 100%;
-        height: 190px;
-    }
+    width: 100%;
+    max-height: 550px;
 }
 swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
 }
 swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
 }
 swiper-container {
     margin-left: auto;
     margin-right: auto;
 }
 swiper-container::part(bullet) {
-    background-color: white;
+    background-color: var(--white);
     opacity: 1;
 }
 swiper-container::part(bullet-active) {
-    background-color: #dbc96c;
+    background-color: var(--primary);
 }
 swiper-container::part(button-next), swiper-container::part(button-prev){
-    color: #fff;
+    color: var(--white);
 }
 section.cards-ads{
     display: flex;
@@ -106,7 +88,9 @@ section.cards-ads{
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 3rem;
+    background-color: var(--white);
+
+    padding-block: 3rem;
 }
 h1{
     margin-bottom: 3rem;
@@ -121,7 +105,7 @@ h1{
 }
 .a-card{
     text-decoration: none;
-    color: var(--primary);
+    color: var(--white);
 }
 .card-atropos{
     width: 300px;
